@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgtsmsoia8ls3"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4stxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7ebr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yo05j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8xda"]
+bg_color = Color(0.142925, 0.261379, 0.444488, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxes6"]
+bg_color = Color(0.440017, 0.604699, 0.858871, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4stxp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x7ebr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -83.0
+offset_right = 235.5
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+text = "Start"
+
+[node name="Levels" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+text = "Levels
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -204.5
+offset_top = 54.0
+offset_right = 204.5
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Pussy destroyers"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
