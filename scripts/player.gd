@@ -13,12 +13,12 @@ var tilemap_pos: Vector2i:
 		var next = get_element(value)
 		if validate_move(current, next):
 			tilemap_pos = value
+			play_animation(next)
 			move_requested.emit()
 
 func _ready():
-	play("default")
+	position = tilemap.map_to_local(start_pos)
 	tilemap_pos = start_pos
-	position = tilemap.map_to_local(tilemap_pos)
 	move_requested.connect(move)
 	finished.connect(func(): print("finish"))
 
@@ -49,6 +49,15 @@ func validate_move(current: Element, next: Element) -> bool:
 	if current == Element.AIR and next == Element.GROUND:
 		return true
 	return false
+
+func play_animation(element: Element):
+	match element:
+		Element.GROUND:
+			play("ground")
+		Element.WATER:
+			play("water")
+		Element.AIR:
+			play("air")
 
 func get_current_element() -> Element:
 	var co = tilemap.local_to_map(position)

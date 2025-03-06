@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhgxfoe0f7yex"]
+[gd_scene load_steps=5 format=3 uid="uid://dhgxfoe0f7yex"]
 
-[ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="1_kot5o"]
+[ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="1_25mm2"]
+[ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="2_0g5sc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4r0xq"]
-texture = ExtResource("1_kot5o")
+texture = ExtResource("1_25mm2")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 1:0/0 = 0
@@ -2044,3 +2045,11 @@ layer_1/name = "Water"
 layer_1/tile_data = PackedInt32Array(-131070, 262145, 31, -65534, 262145, 31, 2, 262145, 31, 65538, 262145, 31, 65539, 262145, 31, 65540, 262145, 31, 4, 262145, 31, 5, 262145, 31, 65541, 262145, 31, 3, 262145, 31, -65533, 262145, 31, -131069, 262145, 31, -131068, 262145, 31, -131067, 262145, 31, -65531, 262145, 31, -65532, 262145, 31)
 layer_2/name = "Air"
 layer_2/tile_data = PackedInt32Array(196606, 655361, 32, 262142, 655361, 32, 196607, 655361, 32, 262143, 655361, 32, 131072, 655361, 32, 196608, 655361, 32, 131073, 655361, 32, 196609, 655361, 32, 131074, 655361, 32, 196610, 655361, 32, 131075, 655361, 32, 196611, 655361, 32, 131076, 655361, 32, 196612, 655361, 32, 131077, 655361, 32, 196613, 655361, 32)
+
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("2_0g5sc")]
+tilemap = NodePath("..")
+start_pos = Vector2i(-1, -1)
+finish_pos = Vector2i(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)

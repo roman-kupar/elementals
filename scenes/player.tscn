@@ -1,7 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctn1rlc5d4gib"]
+[gd_scene load_steps=10 format=3 uid="uid://ctn1rlc5d4gib"]
 
 [ext_resource type="Texture2D" uid="uid://n0khiw58s6ko" path="res://assets/images/player.png" id="1_oarvg"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pe852"]
+[ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="2_j2rmh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haxws"]
+atlas = ExtResource("2_j2rmh")
+region = Rect2(272, 272, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la27h"]
+atlas = ExtResource("2_j2rmh")
+region = Rect2(256, 272, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lhk7o"]
 atlas = ExtResource("1_oarvg")
@@ -11,8 +20,23 @@ region = Rect2(0, 0, 8, 8)
 atlas = ExtResource("1_oarvg")
 region = Rect2(8, 0, 8, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhpti"]
+atlas = ExtResource("2_j2rmh")
+region = Rect2(232, 272, 8, 8)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_r8w2w"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haxws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la27h")
+}],
+"loop": true,
+"name": &"air",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lhk7o")
@@ -21,11 +45,20 @@ animations = [{
 "texture": SubResource("AtlasTexture_30bir")
 }],
 "loop": true,
-"name": &"default",
+"name": &"ground",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhpti")
+}],
+"loop": true,
+"name": &"water",
 "speed": 5.0
 }]
 
 [node name="Player" type="AnimatedSprite2D"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_r8w2w")
+animation = &"ground"
 script = ExtResource("1_pe852")
