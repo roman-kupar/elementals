@@ -43,14 +43,12 @@ func validate_move(current: Element, next: Element) -> bool:
 	if next == Element.NONE: return false
 	if current == next: return true
 
-	if !order.validate(next):
-		return false
 	if current == Element.GROUND:
-		return true
+		return order.validate(next)
 	if current == Element.WATER and next == Element.AIR:
-		return true
+		return order.validate(next)
 	if current == Element.AIR and next == Element.GROUND:
-		return true
+		return order.validate(next)
 	return false
 
 func play_animation(element: Element):
