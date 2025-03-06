@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctn1rlc5d4gib"]
+
+[ext_resource type="Texture2D" uid="uid://n0khiw58s6ko" path="res://player.png" id="1_oarvg"]
+[ext_resource type="Script" path="res://player.gd" id="1_pe852"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhk7o"]
+atlas = ExtResource("1_oarvg")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30bir"]
+atlas = ExtResource("1_oarvg")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r8w2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhk7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30bir")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_r8w2w")
+script = ExtResource("1_pe852")
