@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://nfmrweja3672"]
 
-[ext_resource type="Script" path="res://scripts/levels.gd" id="1_2knhx"]
+[ext_resource type="Script" path="res://scripts/levelsUI.gd" id="1_2knhx"]
 [ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="2_bcsm7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqm3m"]
