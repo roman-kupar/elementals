@@ -10,16 +10,15 @@ config_version=5
 
 [application]
 
-config/name="TUM"
-run/main_scene="res://game.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/name="Elementals"
+run/main_scene="res://scenes/UI/main_menu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[dotnet]
+[autoload]
 
-project/assembly_name="TUM"
+SaveSystem="*res://scripts/save_system.gd"
 
-[rendering]
+[display]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+window/size/mode=3

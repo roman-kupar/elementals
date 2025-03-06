@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgtsmsoia8ls3"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_1rf0b"]
+[ext_resource type="Texture2D" uid="uid://caxci853fv1r4" path="res://assets/images/background_pic.png" id="2_t525l"]
+[ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="3_5indo"]
+[ext_resource type="FontFile" uid="uid://dydx3ahqb7eho" path="res://assets/fonts/main.TTF" id="4_jf1cj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25uyq"]
+texture = ExtResource("2_t525l")
+modulate_color = Color(0.391266, 0.374468, 0.364473, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yo05j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8xda"]
+bg_color = Color(0.142925, 0.261379, 0.444488, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxes6"]
+bg_color = Color(0.440017, 0.604699, 0.858871, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1rf0b")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_25uyq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = 138.0
+offset_right = 235.5
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5indo")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+text = "Start"
+
+[node name="Levels" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5indo")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+text = "Levels
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5indo")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -204.5
+offset_top = 167.0
+offset_right = 204.5
+offset_bottom = 236.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_jf1cj")
+theme_override_font_sizes/font_size = 100
+text = "Artemis"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
