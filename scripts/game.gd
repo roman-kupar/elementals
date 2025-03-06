@@ -21,4 +21,6 @@ func load_level(level_num: int):
 	level_container.add_child(level_scene)
 
 func level_finished():
-	print("finish")
+	SaveSystem.set_progress("level",SaveSystem.last_level+1)
+	var last_level = SaveSystem.last_level
+	load_level(last_level)
