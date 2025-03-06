@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://nfmrweja3672"]
 
-[ext_resource type="Script" path="res://scripts/levels.gd" id="1_3dlqo"]
-[ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="2_d2tp7"]
+[ext_resource type="Script" path="res://scripts/levels.gd" id="1_2knhx"]
+[ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="2_bcsm7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqm3m"]
 bg_color = Color(0.36136, 0.590101, 0.827623, 1)
@@ -18,7 +18,7 @@ offset_top = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3dlqo")
+script = ExtResource("1_2knhx")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_direction = 1
@@ -48,7 +48,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -67,7 +67,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -85,7 +85,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -103,7 +103,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -121,7 +121,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -139,7 +139,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -157,7 +157,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -175,7 +175,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -193,7 +193,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -211,7 +211,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
@@ -229,7 +229,7 @@ offset_top = 199.0
 offset_right = 75.0
 offset_bottom = 268.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_d2tp7")
+theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_font_sizes/font_size = 50
 text = "Levels
 "

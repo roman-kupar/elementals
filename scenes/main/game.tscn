@@ -1,0 +1,34 @@
+[gd_scene load_steps=11 format=3 uid="uid://c73ipd1v0evbm"]
+
+[ext_resource type="PackedScene" uid="uid://bccb6aorbdlu8" path="res://scenes/levels/level_1.tscn" id="1_s1k4q"]
+[ext_resource type="PackedScene" uid="uid://km6faplggdxm" path="res://scenes/levels/level_2.tscn" id="2_c0802"]
+[ext_resource type="PackedScene" uid="uid://b4uag1t1xgbbk" path="res://scenes/levels/level_3.tscn" id="3_8ls7s"]
+[ext_resource type="PackedScene" uid="uid://bvadflragauc6" path="res://scenes/levels/level_4.tscn" id="4_s0hch"]
+[ext_resource type="PackedScene" uid="uid://idnpsrtv1vlk" path="res://scenes/levels/level_5.tscn" id="5_7vpjg"]
+[ext_resource type="PackedScene" uid="uid://ceuw3eqni5pa8" path="res://scenes/levels/level_6.tscn" id="6_eo4fx"]
+[ext_resource type="PackedScene" uid="uid://lwcp0tdfxgar" path="res://scenes/levels/level_7.tscn" id="7_0nrtf"]
+[ext_resource type="PackedScene" uid="uid://cvmaahsi78yxc" path="res://scenes/levels/level_8.tscn" id="8_j2q7y"]
+[ext_resource type="PackedScene" uid="uid://cpuw1i5f5lyiu" path="res://scenes/levels/level_9.tscn" id="9_uktsr"]
+[ext_resource type="PackedScene" uid="uid://ddajvwk0thx4m" path="res://scenes/levels/level_10.tscn" id="10_cqokm"]
+
+[node name="Game" type="Node2D"]
+
+[node name="level_1" parent="." instance=ExtResource("1_s1k4q")]
+
+[node name="level_2" parent="." instance=ExtResource("2_c0802")]
+
+[node name="level_3" parent="." instance=ExtResource("3_8ls7s")]
+
+[node name="level_4" parent="." instance=ExtResource("4_s0hch")]
+
+[node name="level_5" parent="." instance=ExtResource("5_7vpjg")]
+
+[node name="level_6" parent="." instance=ExtResource("6_eo4fx")]
+
+[node name="level_7" parent="." instance=ExtResource("7_0nrtf")]
+
+[node name="level_8" parent="." instance=ExtResource("8_j2q7y")]
+
+[node name="level_9" parent="." instance=ExtResource("9_uktsr")]
+
+[node name="level_10" parent="." instance=ExtResource("10_cqokm")]
