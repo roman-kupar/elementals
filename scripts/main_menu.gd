@@ -9,14 +9,11 @@ extends Control
 func _ready() -> void:
 	print("Last unlocked level: ", SaveSystem.last_level)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _on_start_pressed() -> void:
-	var last_level = SaveSystem.last_level 
-	var level_path = "res://scenes/levels/level_" + str(last_level) + ".tscn"
-	get_tree().change_scene_to_file(level_path)
+	#var last_level = SaveSystem.last_level 
+	#var level_path = "res://scenes/levels/level_" + str(last_level) + ".tscn"
+	get_tree().change_scene_to_file("res://scenes/main/game.tscn")
 	
 func _on_levels_pressed() -> void:
 	main_menu.hide()
