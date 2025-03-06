@@ -5,6 +5,7 @@ signal move_requested
 signal finished
 
 @export var tilemap: TileMap
+@export var order: StateBar
 @export var start_pos: Vector2i
 @export var finish_pos: Vector2i
 
@@ -40,9 +41,10 @@ func move():
 
 func validate_move(current: Element, next: Element) -> bool:
 	if next == Element.NONE: return false
+	if current == next: return true
 
-	if current == next:
-		return true
+	if !order.validate(next):
+		return false
 	if current == Element.GROUND:
 		return true
 	if current == Element.WATER and next == Element.AIR:

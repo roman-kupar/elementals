@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhgxfoe0f7yex"]
+[gd_scene load_steps=6 format=3 uid="uid://dhgxfoe0f7yex"]
 
 [ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="1_25mm2"]
 [ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="2_0g5sc"]
+[ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="3_x724a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4r0xq"]
 texture = ExtResource("1_25mm2")
@@ -2046,10 +2047,14 @@ layer_1/tile_data = PackedInt32Array(-131070, 1, 8, -65534, 1, 8, 2, 1, 8, 65538
 layer_2/name = "Air"
 layer_2/tile_data = PackedInt32Array(196606, 589825, 34, 262142, 589825, 34, 196607, 589825, 34, 262143, 589825, 34, 131072, 589825, 34, 196608, 589825, 34, 131073, 589825, 34, 196609, 589825, 34, 131074, 589825, 34, 196610, 589825, 34, 131075, 589825, 34, 196611, 589825, 34, 131076, 589825, 34, 196612, 589825, 34, 131077, 589825, 34, 196613, 589825, 34)
 
-[node name="Player" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("2_0g5sc")]
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("2_0g5sc")]
 tilemap = NodePath("..")
+order = NodePath("../StateBar")
 start_pos = Vector2i(-1, -1)
 finish_pos = Vector2i(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(8, 8)
+
+[node name="StateBar" parent="." instance=ExtResource("3_x724a")]
+order = Array[int]([1, 2, 0, 255, 255, 0])
