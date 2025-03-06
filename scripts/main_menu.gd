@@ -11,6 +11,9 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
+	#TODO
+	#Change that, to load the level, based on last unlocked level
+	
 
 func _on_levels_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/UI/levels.tscn")
