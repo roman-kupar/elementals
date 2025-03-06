@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bxcrwcg1xqyms" path="res://assets/state_bar/none.png" id="5_yaysj"]
 
 [node name="StateBar" type="HBoxContainer"]
+anchors_preset = -1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
 script = ExtResource("1_5kukl")
 ground = ExtResource("2_88nx5")

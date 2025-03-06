@@ -15,9 +15,15 @@ func _ready():
 		var texture = match_texture(element)
 		var rect = TextureRect.new()
 		rect.texture = texture
+		
+		rect.custom_minimum_size = Vector2(50, 50)  
+
+		rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT  
+		rect.size_flags_horizontal = Control.SIZE_EXPAND
+		rect.size_flags_vertical = Control.SIZE_EXPAND
+		
 		add_child(rect)
 		elements.append(rect)
-
 
 func match_texture(element: Player.Element) -> CompressedTexture2D:
 	match element:
