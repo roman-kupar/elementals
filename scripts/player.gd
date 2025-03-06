@@ -1,3 +1,4 @@
+class_name Player
 extends AnimatedSprite2D
 
 signal move_requested

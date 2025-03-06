@@ -1,37 +1,40 @@
 [gd_scene load_steps=10 format=3 uid="uid://ctn1rlc5d4gib"]
 
-[ext_resource type="Texture2D" uid="uid://n0khiw58s6ko" path="res://assets/images/player.png" id="1_oarvg"]
+[ext_resource type="Texture2D" uid="uid://bmh0ijhygq06k" path="res://assets/images/chars.png" id="1_djavu"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pe852"]
-[ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="2_j2rmh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_haxws"]
-atlas = ExtResource("2_j2rmh")
-region = Rect2(272, 272, 8, 8)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd4u2"]
+atlas = ExtResource("1_djavu")
+region = Rect2(0, 8, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_la27h"]
-atlas = ExtResource("2_j2rmh")
-region = Rect2(256, 272, 8, 8)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1kde"]
+atlas = ExtResource("1_djavu")
+region = Rect2(8, 8, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhk7o"]
-atlas = ExtResource("1_oarvg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_56wly"]
+atlas = ExtResource("1_djavu")
 region = Rect2(0, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_30bir"]
-atlas = ExtResource("1_oarvg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wmb0"]
+atlas = ExtResource("1_djavu")
 region = Rect2(8, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mhpti"]
-atlas = ExtResource("2_j2rmh")
-region = Rect2(232, 272, 8, 8)
+[sub_resource type="AtlasTexture" id="AtlasTexture_87av3"]
+atlas = ExtResource("1_djavu")
+region = Rect2(0, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id5q6"]
+atlas = ExtResource("1_djavu")
+region = Rect2(8, 16, 8, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r8w2w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_haxws")
+"texture": SubResource("AtlasTexture_dd4u2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_la27h")
+"texture": SubResource("AtlasTexture_q1kde")
 }],
 "loop": true,
 "name": &"air",
@@ -39,10 +42,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lhk7o")
+"texture": SubResource("AtlasTexture_56wly")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_30bir")
+"texture": SubResource("AtlasTexture_8wmb0")
 }],
 "loop": true,
 "name": &"ground",
@@ -50,7 +53,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mhpti")
+"texture": SubResource("AtlasTexture_87av3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id5q6")
 }],
 "loop": true,
 "name": &"water",
