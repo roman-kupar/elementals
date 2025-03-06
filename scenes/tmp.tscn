@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[gd_scene load_steps=6 format=3 uid="uid://b6l3lxtcgoueo"]
-
-[ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="1_25mm2"]
-[ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="2_0g5sc"]
-=======
 [gd_scene load_steps=10 format=3 uid="uid://dhgxfoe0f7yex"]
 
 [ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="1_25mm2"]
 [ext_resource type="Texture2D" uid="uid://cbxmnba6u802l" path="res://assets/tilesets/ground.png" id="1_gow1h"]
 [ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="2_0g5sc"]
 [ext_resource type="Texture2D" uid="uid://cqsqtdnsydcmj" path="res://assets/tilesets/air.png" id="3_isnk4"]
->>>>>>> dc826b5cbd004b8b1dfd90b5261cf0d1811cbf7b
-=======
-[gd_scene load_steps=10 format=3 uid="uid://dhgxfoe0f7yex"]
-
-[ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="1_25mm2"]
-[ext_resource type="Texture2D" uid="uid://cbxmnba6u802l" path="res://assets/tilesets/ground.png" id="1_gow1h"]
-[ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="2_0g5sc"]
-[ext_resource type="Texture2D" uid="uid://cqsqtdnsydcmj" path="res://assets/tilesets/air.png" id="3_isnk4"]
->>>>>>> dc826b5cbd004b8b1dfd90b5261cf0d1811cbf7b
 [ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="3_x724a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w6gnu"]
@@ -2114,15 +2098,14 @@ layer_3/z_index = -1
 layer_3/tile_data = PackedInt32Array(196606, 131076, 4, 131073, 196612, 4, 131072, 262148, 4, 196607, 262148, 4)
 layer_4/name = "Decorations"
 
-[node name="Player" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("2_0g5sc")]
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("2_0g5sc")]
 tilemap = NodePath("..")
+order = NodePath("../CanvasLayer/Control/StateBar")
 start_pos = Vector2i(-1, -1)
 finish_pos = Vector2i(3, 3)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(8, 8)
-position_smoothing_enabled = true
-position_smoothing_speed = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -2133,7 +2116,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="StateBar" parent="CanvasLayer/Control" instance=ExtResource("3_x724a")]
 layout_mode = 1
@@ -2145,4 +2127,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 order = Array[int]([1, 2, 0, 255, 255, 0])
-metadata/_edit_use_anchors_ = true
