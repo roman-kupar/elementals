@@ -4,10 +4,11 @@ extends AnimatedSprite2D
 signal move_requested
 signal finished
 
-#@export var tilemap: TileMap
-#@export var order: StateBar
-@onready var tilemap: TileMap = $"../Map"
-@onready var order: StateBar = $"../CanvasLayer/Control/StateBar"
+@export var tilemap: TileMap
+@export var order: StateBar
+#@onready var tilemap: TileMap = $"../Map"
+#@onready var order: StateBar = $"../CanvasLayer/Control/StateBar"
+
 @export var start_pos: Vector2i
 @export var finish_pos: Vector2i
 
@@ -26,7 +27,6 @@ func _ready():
 	position = tilemap.map_to_local(start_pos)
 	tilemap_pos = start_pos
 	move_requested.connect(move)
-	finished.connect(func(): print("finish"))
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_up"):

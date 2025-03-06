@@ -14,4 +14,11 @@ func load_level(level_num: int):
 	# Load the new level
 	var level_path = "res://scenes/levels/level_" + str(level_num) + ".tscn"
 	var level_scene = load(level_path).instantiate()
+	
+	var player : Player = level_scene.get_node("Player")
+	player.finished.connect(level_finished)
+	
 	level_container.add_child(level_scene)
+
+func level_finished():
+	print("finish")

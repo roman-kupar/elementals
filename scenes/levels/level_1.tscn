@@ -11,10 +11,12 @@ layer_0/tile_data = PackedInt32Array(-65538, 262145, 11, -65537, 393217, 10, -13
 layer_1/tile_data = PackedInt32Array(196615, 589825, 36, 262151, 589825, 36, 327687, 589825, 36, 393223, 589825, 36, 458759, 589825, 36, 196616, 589825, 36, 262152, 589825, 36, 327688, 589825, 36, 393224, 589825, 36, 458760, 589825, 36, 196617, 589825, 36, 262153, 196609, 17, 327689, 589825, 36, 393225, 589825, 36, 458761, 589825, 36, 196618, 589825, 36, 262154, 589825, 36, 327690, 589825, 36, 393226, 589825, 36, 458762, 917505, 24, 196619, 589825, 36, 262155, 589825, 36, 393227, 589825, 36, 458763, 917505, 24, 196620, 589825, 36, 262156, 589825, 36, 327692, 589825, 36, 393228, 589825, 36, 458764, 917505, 24, 196621, 589825, 36, 262157, 589825, 36, 327693, 589825, 36, 393229, 589825, 36, 458765, 917505, 24, 196622, 2097153, 23, 262158, 1441793, 22, 327694, 2097153, 23, 393230, 2686977, 20, 196623, 2097153, 23, 262159, 2097153, 23, 327695, 2097153, 23, 393231, 2686977, 20, 196624, 2097153, 23, 262160, 2097153, 23, 327696, 1835009, 11, 393232, 2686977, 20)
 layer_2/tile_data = PackedInt32Array(-327674, 196609, 30, -262138, 196609, 31, -196602, 196609, 32, -327673, 262145, 30, -262137, 196609, 37, -196601, 262145, 32, -327672, 262145, 30, -262136, 196609, 37, -196600, 262145, 32, -327671, 262145, 30, -262135, 196609, 37, -196599, 262145, 32, -327670, 262145, 30, -262134, 196609, 37, -196598, 262145, 32, -327669, 327681, 30, -262133, 327681, 31, -196597, 327681, 32, 524292, 196609, 30, 589828, 196609, 31, 655364, 196609, 31, 720900, 196609, 32, 524293, 262145, 30, 589829, 262145, 31, 655365, 262145, 31, 720901, 262145, 32, 524294, 327681, 30, 589830, 327681, 31, 655366, 327681, 31, 720902, 327681, 32, 524298, 196609, 30, 589834, 196609, 31, 655370, 196609, 31, 720906, 196609, 32, 524299, 327681, 34, 589835, 262145, 31, 655371, 262145, 31, 720907, 262145, 32, 524300, 393217, 34, 589836, 262145, 31, 655372, 262145, 31, 720908, 262145, 32, 524301, 655361, 34, 589837, 589825, 34, 655373, 655361, 34, 720909, 262145, 32, 524302, 393217, 34, 589838, 524289, 31, 655374, 393217, 34, 720910, 262145, 32, 524303, 262145, 31, 589839, 262145, 31, 655375, 262145, 31, 720911, 262145, 32, 524304, 327681, 31, 589840, 327681, 31, 655376, 327681, 31, 720912, 327681, 32, 458766, 196609, 30, 458767, 262145, 30, 458768, 327681, 30)
 
-[node name="Player" parent="." instance=ExtResource("2_7h16t")]
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("2_7h16t")]
 position = Vector2(-4, -4)
+tilemap = NodePath("../Map")
+order = NodePath("../CanvasLayer/Margin/Control/StateBar")
 start_pos = Vector2i(-1, -1)
-finish_pos = Vector2i(3, 3)
+finish_pos = Vector2i(-1, 3)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(8, 8)
@@ -23,16 +25,19 @@ position_smoothing_speed = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
+[node name="Margin" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_bottom = 34
 metadata/_edit_use_anchors_ = true
 
-[node name="StateBar" parent="CanvasLayer/Control" instance=ExtResource("3_fw832")]
+[node name="Control" type="Control" parent="CanvasLayer/Margin"]
+layout_mode = 2
+
+[node name="StateBar" parent="CanvasLayer/Margin/Control" instance=ExtResource("3_fw832")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -41,6 +46,6 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 10
+theme_override_constants/separation = 34
 order = Array[int]([2, 0, 1, 2, 0, 2, 0])
 metadata/_edit_use_anchors_ = true
