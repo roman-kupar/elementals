@@ -1,13 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://nfmrweja3672"]
+[gd_scene load_steps=7 format=3 uid="uid://nfmrweja3672"]
 
 [ext_resource type="Script" path="res://scripts/levels.gd" id="1_2knhx"]
 [ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="2_bcsm7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqm3m"]
-bg_color = Color(0.36136, 0.590101, 0.827623, 1)
+bg_color = Color(0.336884, 0.529295, 0.279671, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75tkb"]
-bg_color = Color(0.0833002, 0.19731, 0.311797, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok737"]
+bg_color = Color(0.567364, 0.821832, 0.493011, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g52bb"]
+bg_color = Color(0.216035, 0.352438, 0.175356, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4lt2"]
+bg_color = Color(0.418029, 0.642412, 0.351566, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="levels" type="Control"]
 layout_mode = 3
@@ -51,9 +73,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "1
 "
 
@@ -70,9 +92,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "2"
 
 [node name="Level3" type="Button" parent="GridContainer"]
@@ -88,9 +110,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "3"
 
 [node name="Level4" type="Button" parent="GridContainer"]
@@ -106,9 +128,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "4"
 
 [node name="Level5" type="Button" parent="GridContainer"]
@@ -124,9 +146,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "5"
 
 [node name="Level6" type="Button" parent="GridContainer"]
@@ -142,9 +164,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "6"
 
 [node name="Level7" type="Button" parent="GridContainer"]
@@ -160,9 +182,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "7"
 
 [node name="Level8" type="Button" parent="GridContainer"]
@@ -178,9 +200,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "8"
 
 [node name="Level9" type="Button" parent="GridContainer"]
@@ -196,9 +218,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "9"
 
 [node name="Level10" type="Button" parent="GridContainer"]
@@ -214,9 +236,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bcsm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75tkb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pqm3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "10"
 
 [node name="Label" type="Label" parent="."]

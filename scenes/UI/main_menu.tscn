@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cgtsmsoia8ls3"]
+[gd_scene load_steps=14 format=3 uid="uid://cgtsmsoia8ls3"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_1rf0b"]
 [ext_resource type="Texture2D" uid="uid://caxci853fv1r4" path="res://assets/images/background_pic.png" id="2_t525l"]
@@ -13,50 +13,36 @@ modulate_color = Color(0.391266, 0.374468, 0.364473, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yo05j"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8xda"]
-bg_color = Color(0.142925, 0.261379, 0.444488, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3viub"]
+bg_color = Color(0.701967, 0.86689, 0.687386, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxes6"]
-bg_color = Color(0.440017, 0.604699, 0.858871, 1)
+bg_color = Color(0.245663, 0.370747, 0.236347, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppefj"]
+bg_color = Color(0.441902, 0.625403, 0.427665, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ssnd"]
-bg_color = Color(0.440017, 0.604699, 0.858871, 1)
+bg_color = Color(0.210984, 0.322218, 0.201895, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdkmx"]
-bg_color = Color(0.440017, 0.604699, 0.858871, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wiq51"]
-bg_color = Color(0.705933, 0.799108, 0.94189, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8purn"]
-bg_color = Color(0.181618, 0.320139, 0.534307, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8s83"]
-bg_color = Color(0.440017, 0.604699, 0.858871, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwr0b"]
+bg_color = Color(0.207802, 0.318236, 0.199607, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -111,9 +97,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_5indo")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3viub")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
-theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppefj")
 text = "Start"
 
 [node name="Levels" type="Button" parent="VBoxContainer"]
@@ -127,9 +113,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_5indo")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3viub")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
-theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppefj")
 text = "Levels
 "
 
@@ -144,9 +130,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_5indo")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yo05j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_x8xda")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3viub")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sxes6")
-theme_override_styles/normal = SubResource("StyleBoxFlat_sxes6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppefj")
 text = "Quit
 "
 
@@ -186,10 +172,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_5indo")
 theme_override_styles/focus = SubResource("StyleBoxFlat_5ssnd")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_bdkmx")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wiq51")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8purn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_l8s83")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_3viub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3viub")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gwr0b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppefj")
 text = "Back
 "
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c73ipd1v0evbm"]
+[gd_scene load_steps=13 format=3 uid="uid://c73ipd1v0evbm"]
 
 [ext_resource type="PackedScene" uid="uid://bccb6aorbdlu8" path="res://scenes/levels/level_1.tscn" id="1_s1k4q"]
 [ext_resource type="PackedScene" uid="uid://km6faplggdxm" path="res://scenes/levels/level_2.tscn" id="2_c0802"]
@@ -10,25 +10,55 @@
 [ext_resource type="PackedScene" uid="uid://cvmaahsi78yxc" path="res://scenes/levels/level_8.tscn" id="8_j2q7y"]
 [ext_resource type="PackedScene" uid="uid://cpuw1i5f5lyiu" path="res://scenes/levels/level_9.tscn" id="9_uktsr"]
 [ext_resource type="PackedScene" uid="uid://ddajvwk0thx4m" path="res://scenes/levels/level_10.tscn" id="10_cqokm"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="11_atxjo"]
+
+[sub_resource type="GDScript" id="GDScript_1nly7"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Game" type="Node2D"]
 
-[node name="level_1" parent="." instance=ExtResource("1_s1k4q")]
+[node name="Level" type="Node" parent="."]
+script = SubResource("GDScript_1nly7")
 
-[node name="level_2" parent="." instance=ExtResource("2_c0802")]
+[node name="level_1" parent="Level" instance=ExtResource("1_s1k4q")]
 
-[node name="level_3" parent="." instance=ExtResource("3_8ls7s")]
+[node name="level_2" parent="Level" instance=ExtResource("2_c0802")]
 
-[node name="level_4" parent="." instance=ExtResource("4_s0hch")]
+[node name="level_3" parent="Level" instance=ExtResource("3_8ls7s")]
 
-[node name="level_5" parent="." instance=ExtResource("5_7vpjg")]
+[node name="level_4" parent="Level" instance=ExtResource("4_s0hch")]
 
-[node name="level_6" parent="." instance=ExtResource("6_eo4fx")]
+[node name="level_5" parent="Level" instance=ExtResource("5_7vpjg")]
 
-[node name="level_7" parent="." instance=ExtResource("7_0nrtf")]
+[node name="level_6" parent="Level" instance=ExtResource("6_eo4fx")]
 
-[node name="level_8" parent="." instance=ExtResource("8_j2q7y")]
+[node name="level_7" parent="Level" instance=ExtResource("7_0nrtf")]
 
-[node name="level_9" parent="." instance=ExtResource("9_uktsr")]
+[node name="level_8" parent="Level" instance=ExtResource("8_j2q7y")]
 
-[node name="level_10" parent="." instance=ExtResource("10_cqokm")]
+[node name="level_9" parent="Level" instance=ExtResource("9_uktsr")]
+
+[node name="level_10" parent="Level" instance=ExtResource("10_cqokm")]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("11_atxjo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Time" type="Label" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 23.0
