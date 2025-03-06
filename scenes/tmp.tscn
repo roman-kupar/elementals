@@ -2049,12 +2049,30 @@ layer_2/tile_data = PackedInt32Array(196606, 589825, 34, 262142, 589825, 34, 196
 
 [node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("2_0g5sc")]
 tilemap = NodePath("..")
-order = NodePath("../StateBar")
+order = NodePath("../CanvasLayer/Control/StateBar")
 start_pos = Vector2i(-1, -1)
 finish_pos = Vector2i(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(8, 8)
 
-[node name="StateBar" parent="." instance=ExtResource("3_x724a")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StateBar" parent="CanvasLayer/Control" instance=ExtResource("3_x724a")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
 order = Array[int]([1, 2, 0, 255, 255, 0])
