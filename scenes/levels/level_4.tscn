@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://bvadflragauc6"]
+[gd_scene load_steps=2 format=3 uid="uid://bvadflragauc6"]
+
+[ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="1_smfxj"]
 
 [node name="level_4" type="Node"]
+
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("1_smfxj")]
+position = Vector2(-4, -4)
+tilemap = NodePath("")
+order = NodePath("")
+start_pos = Vector2i(-1, -1)
+finish_pos = Vector2i(-1, 3)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(8, 8)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
