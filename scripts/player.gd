@@ -4,8 +4,9 @@ extends AnimatedSprite2D
 signal move_requested
 signal finished
 
-@export var tilemap: TileMap
+#@export var tilemap: TileMap
 #@export var order: StateBar
+@onready var tilemap: TileMap = $"../Map"
 @onready var order: StateBar = $"../CanvasLayer/Control/StateBar"
 @export var start_pos: Vector2i
 @export var finish_pos: Vector2i
@@ -20,8 +21,7 @@ var tilemap_pos: Vector2i:
 			move_requested.emit()
 
 func _ready():
-	if tilemap == null:
-		tilemap = get_parent() as TileMap
+
 		
 	position = tilemap.map_to_local(start_pos)
 	tilemap_pos = start_pos

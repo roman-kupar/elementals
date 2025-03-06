@@ -50,3 +50,10 @@ script = SubResource("GDScript_1nly7")
 [node name="level_9" parent="Level" instance=ExtResource("9_uktsr")]
 
 [node name="level_10" parent="Level" instance=ExtResource("10_cqokm")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -855.0
+offset_top = -425.0
+offset_right = 863.0
+offset_bottom = 445.0
+color = Color(0.153035, 0.342869, 0.261648, 1)
