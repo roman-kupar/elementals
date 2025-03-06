@@ -11,12 +11,13 @@ var current: int = 0
 var elements: Array[TextureRect]
 
 func _ready():
+	set_texture_filter(CanvasItem.TEXTURE_FILTER_NEAREST)
+
 	for element in order:
 		var texture = match_texture(element)
 		var rect = TextureRect.new()
 		rect.texture = texture
-		
-		rect.custom_minimum_size = Vector2(50, 50)  
+		rect.custom_minimum_size = Vector2(100, 100)  
 
 		rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT  
 		rect.size_flags_horizontal = Control.SIZE_EXPAND
