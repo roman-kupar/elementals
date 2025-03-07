@@ -6,7 +6,7 @@ var last_level: int = 1 # Default value
 var to_load: int
 
 func _ready():
-	#restart_progress()
+	restart_progress()
 	load_game()
 	last_level = get_progress("level", 1) # Load last level at startup
 
