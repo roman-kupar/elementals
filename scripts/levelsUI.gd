@@ -1,6 +1,7 @@
 extends Control
 
 @onready var grid_container: GridContainer = $GridContainer
+@onready var main_menu: Control = $".."
 
 func _ready():
 	var last_unlocked_level = SaveSystem.last_level

@@ -1,6 +1,7 @@
 extends Node
 
 @onready var level_container = $Level  # A placeholder node to hold levels
+@onready var main_menu: Control = $MainMenu
 
 func _ready():
 	var last_level = SaveSystem.last_level
