@@ -2,10 +2,14 @@ extends Node
 
 @onready var level_container = $Level # A placeholder node to hold levels
 
+var current_level: int
+
 func _ready():
 	load_level(SaveSystem.to_load)
 
 func load_level(level_num: int):
+	current_level = level_num
+
 	# Free previous level (if any)
 	for child in level_container.get_children():
 		child.queue_free()
@@ -21,5 +25,10 @@ func load_level(level_num: int):
 
 func level_finished():
 	SaveSystem.set_progress("level", SaveSystem.last_level + 1)
-	var last_level = SaveSystem.last_level
-	load_level(last_level)
+	load_level(SaveSystem.last_level)
+
+func _on_main_menu_pressed():
+	get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
+
+func _on_restart_pressed():
+	load_level(current_level)
