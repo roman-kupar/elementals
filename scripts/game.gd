@@ -11,7 +11,7 @@ func load_level(level_num: int):
 	current_level = level_num
 	
 	if level_num > 8:
-		get_tree().change_scene_to_file("res://scenes/UI/game_completed.tscn") # Adjust to correct scene
+		get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn") # Adjust to correct scene
 		return
 
 	# Free previous level (if any)
