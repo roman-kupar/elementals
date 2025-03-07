@@ -30,7 +30,7 @@ func set_progress(key: String, value):
 	if key == "level":
 		last_level = value # Update global last_level
 
-func get_progress(key: String, default = null):
+func get_progress(key: String, default = 1):
 	return progress.get(key, default)
 
 func restart_progress():
