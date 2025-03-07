@@ -5,6 +5,7 @@ var progress: Dictionary = {}
 var last_level: int = 1  # Default value
 
 func _ready():
+	restart_progress()
 	load_game()
 	last_level = get_progress("level", 1)  # Load last level at startup
 
@@ -30,3 +31,8 @@ func set_progress(key: String, value):
 
 func get_progress(key: String, default = null):
 	return progress.get(key, default)
+
+func restart_progress():
+	progress.clear()
+	last_level = 1  
+	save_game()
