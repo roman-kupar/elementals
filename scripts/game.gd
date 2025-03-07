@@ -9,7 +9,9 @@ func _ready():
 
 func load_level(level_num: int):
 	current_level = level_num
-
+	
+	if (level_num > 8):
+		get_tree().change_scene_to_file("res://scenes/main/game.tscn")
 	# Free previous level (if any)
 	for child in level_container.get_children():
 		child.queue_free()

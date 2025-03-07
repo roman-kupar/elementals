@@ -58,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
-columns = 5
+columns = 4
 
 [node name="Level1" type="Button" parent="GridContainer"]
 layout_mode = 2
@@ -205,42 +205,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
 text = "8"
 
-[node name="Level9" type="Button" parent="GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_bcsm7")
-theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
-theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
-text = "9"
-
-[node name="Level10" type="Button" parent="GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_bcsm7")
-theme_override_styles/focus = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pqm3m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ok737")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g52bb")
-theme_override_styles/normal = SubResource("StyleBoxFlat_g4lt2")
-text = "10"
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -264,5 +228,3 @@ text = "Levels
 [connection signal="pressed" from="GridContainer/Level6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="GridContainer/Level7" to="." method="_on_level_7_pressed"]
 [connection signal="pressed" from="GridContainer/Level8" to="." method="_on_level_8_pressed"]
-[connection signal="pressed" from="GridContainer/Level9" to="." method="_on_level_9_pressed"]
-[connection signal="pressed" from="GridContainer/Level10" to="." method="_on_level_10_pressed"]

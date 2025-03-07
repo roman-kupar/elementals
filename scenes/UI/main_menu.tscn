@@ -148,7 +148,7 @@ offset_bottom = 268.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_jf1cj")
 theme_override_font_sizes/font_size = 100
-text = "Artemis"
+text = "Elementrip"
 
 [node name="LevelsMenu" parent="." instance=ExtResource("6_igrru")]
 visible = false
