@@ -11,6 +11,11 @@ extends Control
 func _ready() -> void:
 	print("Last unlocked level: ", SaveSystem.last_level)
 
+func _process(delta: float):
+	if (Input.is_action_just_pressed("Restart")):
+		SaveSystem.restart_progress()
+		get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
+		
 func _on_start_pressed() -> void:
 	SaveSystem.to_load = SaveSystem.last_level
 	get_tree().change_scene_to_file("res://scenes/main/game.tscn")
