@@ -1,3 +1,47 @@
-[gd_scene format=3 uid="uid://lwcp0tdfxgar"]
+[gd_scene load_steps=4 format=3 uid="uid://lwcp0tdfxgar"]
+
+[ext_resource type="PackedScene" uid="uid://bm588ms8e1pxx" path="res://scenes/tilemap.tscn" id="1_u6kw1"]
+[ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="2_cp21x"]
+[ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="3_vfrhp"]
 
 [node name="level_7" type="Node"]
+
+[node name="Map" parent="." instance=ExtResource("1_u6kw1")]
+layer_0/tile_data = PackedInt32Array(-65538, 1114113, 14, -65537, 1114113, 14, -131072, 1114113, 14, -65536, 1114113, 14, 0, 1114113, 14, 65535, 1114113, 14, 65534, 1114113, 14, -2, 1114113, 14, -1, 1114113, 14, -65535, 1835009, 15, -65534, 1835009, 15, -65533, 1835009, 15, -131071, 1835009, 15, -131070, 1835009, 15, -131069, 1835009, 15, 3, 1835009, 15, 2, 1835009, 15, 1, 1835009, 15, 65536, 262145, 31, 131071, 262145, 31, 131070, 262145, 31, 196606, 262145, 31, 196607, 262145, 31, 131072, 262145, 31, 196608, 262145, 31, 262143, 262145, 31, 262142, 262145, 31, -65539, 196609, 24, -65540, 196609, 24, -65541, 196609, 24, -5, 196609, 24, 65531, 196609, 24, 65532, 196609, 24, 65533, 196609, 24, -3, 196609, 24, -4, 196609, 24, -131074, 1179649, 42, -196609, 1179649, 42, -196610, 1179649, 42, -262146, 1179649, 42, -262145, 1179649, 42, -327680, 1179649, 42, -262144, 1179649, 42, -196608, 1179649, 42, -131073, 1179649, 42)
+
+[node name="Player" parent="." instance=ExtResource("2_cp21x")]
+position = Vector2(-4, -4)
+start_pos = Vector2i(-1, -1)
+finish_pos = Vector2i(12, -1)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(8, 8)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Margin" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 34
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="CanvasLayer/Margin"]
+layout_mode = 2
+
+[node name="StateBar" parent="CanvasLayer/Margin/Control" instance=ExtResource("3_vfrhp")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 34
+order = Array[int]([255, 0, 1, 2, 0, 2, 0, 255, 2, 0, 2, 0])
+metadata/_edit_use_anchors_ = true

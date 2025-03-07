@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bccb6aorbdlu8"]
 
-[ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="2_7h16t"]
+[ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="2_7h16t"]
 [ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="2_81cku"]
 [ext_resource type="PackedScene" uid="uid://bm588ms8e1pxx" path="res://scenes/tilemap.tscn" id="2_gldy5"]
 [ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="3_fw832"]

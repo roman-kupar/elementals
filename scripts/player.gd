@@ -29,10 +29,13 @@ func _process(_delta):
 		tilemap_pos += Vector2i.UP
 	if Input.is_action_just_pressed("ui_right"):
 		tilemap_pos += Vector2i.RIGHT
+		flip_h = false
 	if Input.is_action_just_pressed("ui_down"):
 		tilemap_pos += Vector2i.DOWN
 	if Input.is_action_just_pressed("ui_left"):
 		tilemap_pos += Vector2i.LEFT
+		flip_h = true
+
 
 func move():
 	position = tilemap.map_to_local(tilemap_pos)
