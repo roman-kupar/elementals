@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bccb6aorbdlu8"]
 
 [ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="2_7h16t"]
-[ext_resource type="PackedScene" uid="uid://bnstlh3deujed" path="res://scenes/tilemap.tscn" id="2_gldy5"]
+[ext_resource type="PackedScene" uid="uid://bm588ms8e1pxx" path="res://scenes/tilemap.tscn" id="2_gldy5"]
 [ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="3_fw832"]
 
 [node name="level_1" type="Node"]
@@ -48,4 +48,3 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 34
 order = Array[int]([2, 0, 1, 2, 0, 2, 0])
-metadata/_edit_use_anchors_ = true
