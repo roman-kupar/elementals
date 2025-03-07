@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="3_tndqq"]
 [ext_resource type="Texture2D" uid="uid://cbxmnba6u802l" path="res://assets/tilesets/ground.png" id="4_ckm1f"]
 [ext_resource type="FontFile" uid="uid://dhbor6yc5b6g6" path="res://assets/fonts/Minecraftia-Regular.ttf" id="5_5s1vw"]
-[ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="6_fkxvo"]
+[ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="6_fkxvo"]
 [ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="7_s4tdm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0uf6"]
@@ -2120,8 +2120,9 @@ label_settings = SubResource("LabelSettings_p0ip3")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Player" parent="." node_paths=PackedStringArray("order") instance=ExtResource("6_fkxvo")]
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("6_fkxvo")]
 position = Vector2(-4, -4)
+tilemap = NodePath("../Map")
 order = NodePath("../CanvasLayer/Margin/Control/StateBar")
 start_pos = Vector2i(-1, -1)
 finish_pos = Vector2i(11, 0)

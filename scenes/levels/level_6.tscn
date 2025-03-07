@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqsqtdnsydcmj" path="res://assets/tilesets/air.png" id="2_gdjmb"]
 [ext_resource type="Texture2D" uid="uid://cj7wl2u4v7mmc" path="res://assets/tilesets/tileset.png" id="3_5rhd2"]
 [ext_resource type="Texture2D" uid="uid://cbxmnba6u802l" path="res://assets/tilesets/ground.png" id="4_kys6t"]
-[ext_resource type="PackedScene" uid="uid://lw0vafq7lh5h" path="res://scenes/player.tscn" id="5_k7xig"]
+[ext_resource type="PackedScene" uid="uid://ctn1rlc5d4gib" path="res://scenes/player.tscn" id="5_k7xig"]
 [ext_resource type="PackedScene" uid="uid://chhynlemjlqht" path="res://scenes/UI/state_bar.tscn" id="6_7y8uu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pwt4"]
@@ -2090,8 +2090,10 @@ sources/2 = SubResource("TileSetAtlasSource_uvjqj")
 tile_set = SubResource("TileSet_sc1fg")
 layer_0/tile_data = PackedInt32Array(-65538, 524289, 9, -131074, 524289, 8, -131073, 131074, 2, -65537, 65538, 2, -65539, 655361, 18, -196608, 1572865, 10, -131072, 1572865, 11, -65536, 1572865, 12, -65535, 1638401, 12, -65534, 1769473, 12, 2, 1769473, 13, 1, 1507329, 12, 0, 1507329, 12)
 
-[node name="Player" parent="." instance=ExtResource("5_k7xig")]
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("5_k7xig")]
 position = Vector2(-4, -4)
+tilemap = NodePath("../Map")
+order = NodePath("../CanvasLayer/Margin/Control/StateBar")
 start_pos = Vector2i(-1, -1)
 finish_pos = Vector2i(-1, 3)
 

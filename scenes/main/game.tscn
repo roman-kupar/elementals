@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c73ipd1v0evbm"]
+[gd_scene load_steps=14 format=3 uid="uid://c73ipd1v0evbm"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_no1ob"]
 [ext_resource type="PackedScene" uid="uid://cgtsmsoia8ls3" path="res://scenes/UI/main_menu.tscn" id="2_4hhvf"]
@@ -54,6 +54,7 @@ script = SubResource("GDScript_1nly7")
 [node name="level_10" parent="Level" instance=ExtResource("10_cqokm")]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
 offset_left = -855.0
 offset_top = -425.0
 offset_right = 863.0

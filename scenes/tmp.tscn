@@ -2098,8 +2098,7 @@ layer_3/z_index = -1
 layer_3/tile_data = PackedInt32Array(196606, 131076, 4, 131073, 196612, 4, 131072, 262148, 4, 196607, 262148, 4)
 layer_4/name = "Decorations"
 
-[node name="Player" parent="." node_paths=PackedStringArray("tilemap", "order") instance=ExtResource("2_0g5sc")]
-tilemap = NodePath("..")
+[node name="Player" parent="." node_paths=PackedStringArray("order") instance=ExtResource("2_0g5sc")]
 order = NodePath("../CanvasLayer/Control/StateBar")
 start_pos = Vector2i(-1, -1)
 finish_pos = Vector2i(3, 3)
