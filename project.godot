@@ -26,3 +26,7 @@ window/size/mode=3
 [dotnet]
 
 project/assembly_name="Elementals"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.152941, 0.341176, 0.262745, 1)
