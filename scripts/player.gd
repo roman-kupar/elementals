@@ -4,8 +4,9 @@ extends AnimatedSprite2D
 signal move_requested
 signal finished
 
-@export var tilemap: TileMap
+#@export var tilemap: TileMap
 @export var order: StateBar
+@onready var tilemap: TileMap = $"../Map"
 
 @export var start_pos: Vector2i
 @export var finish_pos: Vector2i
